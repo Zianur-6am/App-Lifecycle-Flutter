@@ -7,7 +7,8 @@ class AppLifecycleDisplay extends StatefulWidget {
   State<AppLifecycleDisplay> createState() => _AppLifecycleDisplayState();
 }
 
-class _AppLifecycleDisplayState extends State<AppLifecycleDisplay> with WidgetsBindingObserver {
+class _AppLifecycleDisplayState extends State<AppLifecycleDisplay>
+    with WidgetsBindingObserver {
   final ScrollController _scrollController = ScrollController();
   final List<String> _states = <String>[];
   AppLifecycleState? _state;
@@ -40,6 +41,8 @@ class _AppLifecycleDisplayState extends State<AppLifecycleDisplay> with WidgetsB
     setState(() {
       _states.add(name);
     });
+
+    //This block of code scrolls the content of a SingleChildScrollView to the bottom automatically whenever a new state is added.
     _scrollController.animateTo(
       _scrollController.position.maxScrollExtent,
       duration: const Duration(milliseconds: 200),
