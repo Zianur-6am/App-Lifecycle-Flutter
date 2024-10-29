@@ -67,6 +67,7 @@ class _AppLifecycleDisplayState extends State<AppLifecycleDisplay>
         child: SizedBox(
           width: 300,
           child: SingleChildScrollView(
+            //controller is added to scroll automatically to the end whenever there is a new state added
             controller: _scrollController,
             child: Column(
               children: <Widget>[
