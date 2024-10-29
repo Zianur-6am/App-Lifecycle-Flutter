@@ -29,6 +29,7 @@ class _AppLifecycleDisplayState extends State<AppLifecycleDisplay> with WidgetsB
     super.dispose();
   }
 
+  //checking if lifecycle has changed
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     _handleStateChange(state);
